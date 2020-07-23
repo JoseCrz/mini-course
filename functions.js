@@ -106,3 +106,42 @@ function emailGenerator (name) {
 }
 
 const generatedEmail = emailGenerator('Diego')
+
+// imaginary example of setTimeout
+function SetTimeOut (callback, milliseconds ) {
+  //      undefined       =  esto se fue al servidor ⏳
+  // a very expensive operation
+  // ...
+  // ...
+  callback()
+
+}
+
+console.log('1')
+console.log('2')
+console.log('3')
+setTimeout(function () {
+  console.log('4')
+}, 3000)
+
+
+function getProfileData (callback) {
+  
+  // ⏳⏳⏳⏳⏳
+  const data = {
+    name: 'Luis',
+    lastanme: 'Calderón',
+    age: 18,
+    play: function () {
+      console.log('I\'m playing')
+    }
+  }
+
+  callback(data)
+}
+
+getProfileData(function (data) {
+  console.log(data)
+  data.play()
+})
+
