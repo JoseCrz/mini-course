@@ -1,8 +1,10 @@
 const $input = document.getElementById('name')
 const $button = document.getElementById('button')
 const $button2 = document.getElementById('button2')
+const $button3 = document.querySelector('#button3')
 
 const guests = ['Luis', 'Diego', 'Enrique', 'Javier', 'Jose', 'Memo']
+const colors= ['red', 'blue', 'red']
 
 function checkInvited (name) {
   for(let i = 0; i < guests.length; i++) {  
@@ -12,7 +14,7 @@ function checkInvited (name) {
   return false
 }
 
-$button.addEventListener('click', function () {
+$button.addEventListener('click', () => {
   const name = $input.value
   
   const isInvited = checkInvited(name)
@@ -25,6 +27,17 @@ $button.addEventListener('click', function () {
 
 })
 
-$button2.addEventListener('click', function () {
-  $input.value = ''
+// Arrow function
+$button2.addEventListener('click', () => $input.value = '')
+
+$button3.addEventListener('click',  () => {
+  arrayIterator(guests, guest => alert(guest.toUpperCase()))
+  
+  arrayIterator(colors, color => alert(color))
 })
+
+function arrayIterator (array, callback) {
+  for(let i = 0; i < array.length; i++) {
+    callback(array[i])
+  }
+}
