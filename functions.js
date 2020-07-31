@@ -58,6 +58,7 @@ console.log(multipliedMoney)
 
 // Jose -> ESOJ4@gmail.com
 
+// Function Declaration
 function emailGenerator (name) {
   
   function stringInverter (string) {
@@ -145,3 +146,25 @@ getProfileData(function (data) {
   data.play()
 })
 
+// --- Arrow function ---
+
+// function expresion
+const division = (num1, num2) => num1 / num2
+
+const checkAge = age => age >= 18
+
+const otherFunction = () => {
+  // 
+}
+
+if (checkAge(17)) {
+  alert('you can drink')
+} else {
+  alert('you cannot drink')
+}
+
+function checkAge () {
+  return age >= 18
+} 
+
+console.log('result:', result)

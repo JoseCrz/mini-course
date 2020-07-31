@@ -30,13 +30,12 @@ $button.addEventListener('click', () => {
 // Arrow function
 $button2.addEventListener('click', () => $input.value = '')
 
-$button3.addEventListener('click',  () => {
+$button3.addEventListener('click', () => {
   arrayIterator(guests, guest => alert(guest.toUpperCase()))
-  
-  arrayIterator(colors, color => alert(color))
 })
 
-function arrayIterator (array, callback) {
+// function expression
+const arrayIterator = (array, callback) => {
   for(let i = 0; i < array.length; i++) {
     callback(array[i])
   }
