@@ -57,3 +57,30 @@ const pokedex = (firstGenerationPokemon) => {
 }
 
 pokedex(bulbasaur)
+
+
+const elias = {
+  name: 'Elías Ayub',
+  age: 51,
+  married: true,
+  phone: 2281005400,
+  claveUnicaDeRegistroDePoblacion: 'EAHA950901HVZ'
+}
+
+const rodrigo = {
+  name: 'Rodgrido Herrera',
+  age: 45,
+  married: true,
+  phone: 2281075000,
+  claveUnicaDeRegistroDePoblacion: 'ROHH950901HVZ'
+}
+
+const sharkInfo = (shark) => {
+  const { name, claveUnicaDeRegistroDePoblacion: curp } = shark
+
+  console.log(`El nombre del Shark es: ${name}`)
+  console.log(`El CURP del Shark es: ${curp}`)
+}
+
+sharkInfo(elias)
+sharkInfo(rodrigo)
